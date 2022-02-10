@@ -33,13 +33,16 @@ main {
   background-color: whitesmoke;
   font-size: 2.5rem;
   text-align: center;
-  width: 350px;
-  height: 600px;
-  
+  height: 390px;
 }
 
 #contact {
   display: flex;
+  align-items: flex-end;
+  
+}
+
+#name {
   
 }
 
@@ -86,9 +89,57 @@ img {
 
 
 
+@media only screen and (min-width: 900px) {
+  main {
+    display: grid;
+    text-align: left;
+    width: 720px;
+    height: 410px;
+    grid-template-columns: 40% 60%;
+    background-color: whitesmoke;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+      "status name"
+      "img occupation"
+      "img brand"
+      "contact offer";
+  }
+}
+
+#status {
+  text-align: left;
+  padding: 10px 0 0 20px;
+}
+
+img {
+  grid-area: img;
+  margin: 0 auto;
+}
+
+#brand {
+  display: inline;
+}
+
+#contact {
+  grid-area: contact;
+}
 
 
+#brand > p {
+  padding: 0 20px 0 8px;
+  font-size: 1.4rem;
+}
 
+#offer {
+  font-size: 1.4rem;
+}
+
+#name, #occupation, #brand, #offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 
 
